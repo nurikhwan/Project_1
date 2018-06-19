@@ -1,0 +1,53 @@
+body {
+	font-family: "Luckiest Guy", cursive;
+	background: url("img copy/grass1.png");
+}
+
+h1 {
+	text-align: center;
+	font-size: 140px;
+}
+
+.score {
+	background: rgba(255, 255, 255, 0.2);
+	padding: 40px 48px 0px 48px;
+	border-radius: 16px;
+}
+
+.container {
+	width: 900px;
+	height: 400px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+
+.hole {
+	flex: 30%;
+	overflow: hidden;
+	position: relative;
+}
+
+.hole:after {
+	background: url("img copy/droppipe1.png") bottom center no-repeat;
+	background-size: contain;
+	content: ' ';
+	width: 100%;
+	height: 65px;
+	position: absolute;
+	bottom: -30px;
+}
+
+.gnome {
+	background: url("img copy/gnome.png") bottom center no-repeat;
+	background-size: 55%;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	height: 100%;
+	transition: all 0.4s;
+}
+
+.hole.up .gnome {
+	top: 0;
+}
